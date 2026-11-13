@@ -43,6 +43,14 @@ public:
             tail->next=newNode;
             tail=newNode;
         }
+    }
+    void print(){
+        Node *temp=head;
+        while(temp!=NULL){
+            cout<<temp->data<<" ";
+            temp=temp->next;
+        }
+    }
 }};
 
 int main() {
@@ -51,6 +59,10 @@ int main() {
     ll.push_front(10);
     ll.push_front(20);
     ll.push_front(30);
+    ll.push_back(40);
+    ll.push_back(50);
+
+    ll.print();
 
     return 0;
 }
